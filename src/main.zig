@@ -59,7 +59,7 @@ const DemoState = struct {
     drawables: std.ArrayList(Drawable),
 
     camera: struct {
-        position: [3]f32 = .{ 0.0, 8.0, -4.0 },
+        position: [3]f32 = .{ 0.0, 4.0, -4.0 },
         forward: [3]f32 = .{ 0.0, 0.0, 1.0 },
         pitch: f32 = 0.15 * math.pi,
         yaw: f32 = 0.0,
