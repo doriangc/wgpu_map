@@ -10,6 +10,8 @@ const znoise = @import("znoise");
 const ztracy = @import("ztracy");
 const wgsl = @import("procedural_mesh_wgsl.zig");
 
+const protobuf_parsing = @import("protobuf_parsing.zig");
+
 const window_title = "zig-gamedev: procedural mesh (wgpu)";
 
 const IndexType = zmesh.Shape.IndexType;
@@ -672,6 +674,12 @@ fn createDepthTexture(gctx: *zgpu.GraphicsContext) struct {
 }
 
 pub fn main() !void {
+    try protobuf_parsing.readTile(std.heap.page_allocator, "tiles/6234.mvt");
+
+    return;
+}
+
+fn do() !void {
     try zglfw.init();
     defer zglfw.terminate();
 

@@ -16,6 +16,9 @@ pub fn build(b: *std.Build) void {
         .root_module = mod,
     });
 
+    const protobuf = b.dependency("protobuf", .{ .target = target });
+    exe.root_module.addImport("protobuf", protobuf.module("protobuf"));
+
     const zglfw = b.dependency("zglfw", .{ .target = target });
     exe.root_module.addImport("zglfw", zglfw.module("root"));
     if (target.result.os.tag == .linux) {

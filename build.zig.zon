@@ -168,6 +168,10 @@
             .url = "https://github.com/zig-gamedev/zwindows/archive/c29e0fec072c282a8c6234c5837db071af42a11f.tar.gz",
             .hash = "zwindows-0.2.0-dev-xMZ1uyZpyQZsF6AeAjn_SJM69htI2MKkskHJ-83XzISl",
         },
+        .protobuf = .{
+            .url = "git+https://github.com/Arwalk/zig-protobuf#27f8910aac3840722817d0bd56750916afd619a4",
+            .hash = "protobuf-2.0.0-0e82aqCZGwCTEk11MsgMiy1G4ZP2Q1QKX4QJ9dqfF_M6",
+        },
     },
     .paths = .{
         "build.zig",
